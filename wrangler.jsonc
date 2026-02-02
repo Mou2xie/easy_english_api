@@ -1,0 +1,10 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "easy_english_api",
+    "main": "src/index.ts",
+    "compatibility_date": "2026-02-02",
+    "compatibility_flags": [
+        "nodejs_compat",
+        "nodejs_compat_populate_process_env"
+    ]
+}
