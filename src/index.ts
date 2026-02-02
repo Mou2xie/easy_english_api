@@ -1,14 +1,9 @@
-import { Hono } from 'hono'
-import { mysql_conn } from './libs/mysql_conn';
+import { Hono } from 'hono';
+import { getAllUsers } from './handlers/getAllUsers';
 
 const app = new Hono()
 
 // get all users from database
-app.get('/api/getusers', async (c) => {
-  const query = `SELECT * FROM users`;
-  const [result] = await mysql_conn.query(query);
-  console.log(result);
-  return c.json(result);
-})
+app.get('/api/get-all-users', getAllUsers)
 
 export default app
