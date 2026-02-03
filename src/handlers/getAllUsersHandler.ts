@@ -3,6 +3,7 @@ import { getMysqlConn } from "../libs/mysql_conn";
 
 const query = `SELECT * FROM users`;
 
+// retrieve all users from database
 export const getAllUsersHandler = async (c: Context) => {
     try {
         const mysql_conn = getMysqlConn(c.env);

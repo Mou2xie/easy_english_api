@@ -8,7 +8,7 @@ interface IEnv {
     MYSQL_DATABASE_NAME: string;
 }
 
-// database connection pool
+// return database connection pool instance
 export const getMysqlConn = (env: IEnv) => {
     return mysql.createPool({
         host: env.MYSQL_HOST,
